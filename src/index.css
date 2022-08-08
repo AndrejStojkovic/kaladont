@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Roboto Mono', 'Roboto', 'Open Sans', monospace, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  background: white;
+}
+
+svg {
+  margin-right: 0.2rem;
+}
+
+input[type='text'] {
+  text-align: center;
+}
+
+#main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dark {
+	filter: invert(1) hue-rotate(180deg);
+}
+
+.dark .MuiBackdrop-root {
+  filter: invert(1) hue-rotate(180deg);
+}
