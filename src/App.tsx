@@ -41,11 +41,11 @@ function App() {
             </ButtonGroup>
           </Box>
 
-          <Routes>
-            <Route path='/' element={<Play mode='play' />} />
-            <Route path='/vezhbaj' element={<Play mode='practice' />} />
-            <Route path='/zborovi' element={<Words />} />
-          </Routes>
+          
+          <Route path='/' element={<Play mode='play' />} />
+          <Route path='/vezhbaj' element={<Play mode='practice' />} />
+          <Route path='/zborovi' element={<Words />} />
+
 
           <About open={aboutModalOpen} handleClose={handleAboutModalClose} />
 
