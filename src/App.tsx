@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom'; // Use BrowserRouter if you are not using GH Pages
+import { Routes, Route } from 'react-router-dom'; // Use BrowserRouter if you are not using GH Pages
 import { saveDarkThemeState, loadDarkThemeState } from './components/localStorage';
 
 import { ThemeProvider } from '@mui/material';
@@ -41,10 +41,11 @@ function App() {
             </ButtonGroup>
           </Box>
 
-          
-          <Route path='/' element={<Play mode='play' />} />
-          <Route path='/vezhbaj' element={<Play mode='practice' />} />
-          <Route path='/zborovi' element={<Words />} />
+          <Routes>
+            <Route path='/' element={<Play mode='play' />} />
+            <Route path='/vezhbaj' element={<Play mode='practice' />} />
+            <Route path='/zborovi' element={<Words />} />
+          </Routes>
 
 
           <About open={aboutModalOpen} handleClose={handleAboutModalClose} />

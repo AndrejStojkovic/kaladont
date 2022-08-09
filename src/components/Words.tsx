@@ -6,7 +6,8 @@ import customTheme from './theme';
 import axios from 'axios';
 
 import { bukvi } from './bukvi';
-const json_url = '/zborovi-json/';
+//const json_url = '/zborovi-json/';
+const json_url = 'https://raw.githubusercontent.com/AndrejStojkovic/macedonian_wiktionary/main/zborovi-json/';
 
 type WordsArray = {
   key: number,
