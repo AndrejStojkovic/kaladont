@@ -1,4 +1,4 @@
-<p align="center" style="margin: 0">
+<p align="center" style="margin: 0!important">
   <a href="https://github.com/AndrejStojkovic/kaladont">
     <img src="/public/favicon.png" alt="Logo">
   </a>
