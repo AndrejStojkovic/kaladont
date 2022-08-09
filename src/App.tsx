@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom'; // Use BrowserRouter if you are not using GH Pages
 import { saveDarkThemeState, loadDarkThemeState } from './components/localStorage';
 
 import { ThemeProvider } from '@mui/material';
@@ -29,7 +29,7 @@ function App() {
   }, [darkTheme]);
 
   return (
-    <Router>
+    <HashRouter>
       <ThemeProvider theme={customTheme}>
         <div className='App'>
           <Container id='main' maxWidth='md'>
@@ -78,7 +78,7 @@ function App() {
           </Container>
         </div>
       </ThemeProvider>
-    </Router>
+    </HashRouter>
   );
 }
 
