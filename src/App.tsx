@@ -29,56 +29,54 @@ function App() {
   }, [darkTheme]);
 
   return (
-    <HashRouter>
-      <ThemeProvider theme={customTheme}>
-        <div className='App'>
-          <Container id='main' maxWidth='md'>
-            <Box id='header' padding='2rem' textAlign='center'>
-              <Typography marginBottom='1rem' variant='h3'>КАЛАДОНТ</Typography>
-              <ButtonGroup variant='outlined'>
-                <Button href='/'><SvgIcon sx={{ml: '-0.5rem'}} component={PlayArrow} />Играј</Button>
-                <Button href='/vezhbaj'><SvgIcon component={Abc} />Вежбај</Button>
-                <Button href='/zborovi'><SvgIcon component={Search} />Зборови</Button>
-              </ButtonGroup>
+    <ThemeProvider theme={customTheme}>
+      <div className='App'>
+        <Container id='main' maxWidth='md'>
+          <Box id='header' padding='2rem' textAlign='center'>
+            <Typography marginBottom='1rem' variant='h3'>КАЛАДОНТ</Typography>
+            <ButtonGroup variant='outlined'>
+              <Button href='/'><SvgIcon sx={{ml: '-0.5rem'}} component={PlayArrow} />Играј</Button>
+              <Button href='/vezhbaj'><SvgIcon component={Abc} />Вежбај</Button>
+              <Button href='/zborovi'><SvgIcon component={Search} />Зборови</Button>
+            </ButtonGroup>
+          </Box>
+
+          <Routes>
+            <Route path='/' element={<Play mode='play' />} />
+            <Route path='/vezhbaj' element={<Play mode='practice' />} />
+            <Route path='/zborovi' element={<Words />} />
+          </Routes>
+
+          <About open={aboutModalOpen} handleClose={handleAboutModalClose} />
+
+          <Box padding='1rem'>
+            <Box sx={{textAlign: 'center', margin: '1rem'}}>
+              <Button variant='outlined' onClick={() => handleAboutModalOpen()}>
+                <SvgIcon sx={{ml: '-0.25rem'}} component={InfoOutlined} /> За Играта
+              </Button>
+              <br />
+              <Button variant='outlined' sx={{mt: 1}} onClick={() => setDarkTheme(!darkTheme)}>
+                <SvgIcon sx={{ml: '-0.25rem'}} component={darkTheme ? LightMode : DarkMode} /> Тема
+              </Button>
             </Box>
 
-            <Routes>
-              <Route path='/' element={<Play mode='play' />} />
-              <Route path='/vezhbaj' element={<Play mode='practice' />} />
-              <Route path='/zborovi' element={<Words />} />
-            </Routes>
+            <Divider />
 
-            <About open={aboutModalOpen} handleClose={handleAboutModalClose} />
-
-            <Box padding='1rem'>
-              <Box sx={{textAlign: 'center', margin: '1rem'}}>
-                <Button variant='outlined' onClick={() => handleAboutModalOpen()}>
-                  <SvgIcon sx={{ml: '-0.25rem'}} component={InfoOutlined} /> За Играта
-                </Button>
-                <br />
-                <Button variant='outlined' sx={{mt: 1}} onClick={() => setDarkTheme(!darkTheme)}>
-                  <SvgIcon sx={{ml: '-0.25rem'}} component={darkTheme ? LightMode : DarkMode} /> Тема
-                </Button>
+            <Box paddingTop='1rem' textAlign='center'>
+              <Box>
+                <Typography>
+                  Проект изработен од <Link href='https://github.com/AndrejStojkovic'>Андреј Стојковиќ</Link>
+                </Typography>
               </Box>
 
-              <Divider />
-
-              <Box paddingTop='1rem' textAlign='center'>
-                <Box>
-                  <Typography>
-                    Проект изработен од <Link href='https://github.com/AndrejStojkovic'>Андреј Стојковиќ</Link>
-                  </Typography>
-                </Box>
-
-                <Box>
-                  <Link href='https://github.com/AndrejStojkovic/kaladont'>GitHub Repo</Link>
-                </Box>
+              <Box>
+                <Link href='https://github.com/AndrejStojkovic/kaladont'>GitHub Repo</Link>
               </Box>
             </Box>
-          </Container>
-        </div>
-      </ThemeProvider>
-    </HashRouter>
+          </Box>
+        </Container>
+      </div>
+    </ThemeProvider>
   );
 }
 
