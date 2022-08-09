@@ -36,8 +36,8 @@ Steps to make it work:
 
 ## Preview
 
-<img src="/Misc/1.jpg" alt="Preview 1">
-<img src="/Misc/2.jpg" alt="Preview 2">
+<img src="/misc/prev1.png" alt="Preview 1">
+<img src="/misc/prev2.png" alt="Preview 2">
 
 ## To-Do
 
